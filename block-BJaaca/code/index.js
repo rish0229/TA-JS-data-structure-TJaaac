@@ -5,8 +5,10 @@ let character = {};
 
 //  - Go to this [Arya Stark](https://awoiaf.westeros.org/index.php/Arya_Stark)
 
-//  Re-assign the value of `character` variable to and object with the key `characterName` and value of "Arya"
-character.characterName = 'Arya';
+//  Re-assign the value of `character` variable to an object with the key `characterName` and value of "Arya"
+character = {
+  characterName: 'Arya',
+};
 
 // - A variable named `age` is predefined with value 20. Add a new key named `character-age` with the value of `age` variable i.e 20 (don't use the value 20)
 
@@ -43,7 +45,7 @@ character.greet = function () {
 character.greet();
 
 //  - Add a new property in the character object `isAdult`. The value will be true if age is greater than 18 or it will be false.
-character.isAdult = age > 18;
+character.isAdult = character.age > 18 ? true : false;
 
 // - Add a new method (function inside objects are called methods) named `changeIsAdult`. When called should be able to flip the value of `isAdult` from true to false and false to true.
 character.changeIsAdult = !character.isAdult;
@@ -57,10 +59,10 @@ character['playedBy'] = 'Maisie Williams';
 alert(character[keyName]);
 
 // - Using the function `console.log` log the value of the key `42`. You don't have to add the key
-console.log(character['42']);
+console.log(character[42]);
 
 // - Add a new key named `totalSeasons` with the value of `1 + 2 + 3 + 2`. Use this expression
 character.totalSeasons = 1 + 2 + 3 + 2;
 
 // - Access the value of the key `totalSeason` (it should be 8)
-character['totalSeasons'];
+console.log(character['totalSeasons']);
