@@ -13,8 +13,20 @@ console.log(result);
 console.log(result / arr.length);
 
 // 4. Find the highest number in the array and print it to the console using console.log()
+let highestNumber = 3;
+for (let num of arr) {
+  if (num > highestNumber) {
+    highestNumber = num;
+  }
+}
+console.log(highestNumber);
 
 // 5. Find the lowest number in the array and print it to the console using console.log()
+let lowestNumber = 5;
+for (let num of arr) {
+  num < lowestNumber ? (lowestNumber = num) : false;
+}
+console.log(lowestNumber);
 
 // 6. Find the even numbers in the array and print them to the console using console.log()
 let evenNum = [];
