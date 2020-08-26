@@ -3,15 +3,50 @@ let numbers = [6, 8, 10, 12, 43, 56, 98];
 let userIds = [1230, 234, 1278, 984, 763, 900];
 
 // 1. Add all the values of numbers and userIds array into the new newly created array named `collection`
+// let collection = [];
+// function findSum(arr) {
+//   let result = 0;
+//   for (let sum of arr) {
+//     result += sum;
+//   }
+//   return result;
+// }
+// collection[0] = findSum(numbers);
+// collection[1] = findSum(userIds);
+// console.log(collection);
 
 // 2. Add all the even numbers from both arrays numbers and userIds into a newly created array named `evenCollection`
+let evenCollection = [];
+let oddCollection = [];
+function findEven(arr) {
+  for (let num of arr) {
+    if (num % 2 === 0) {
+      evenCollection.push(num);
+    }
+  }
+  return evenCollection;
+}
+findEven(numbers);
+findEven(userIds);
+console.log(evenCollection);
 
 // 3. Add all the odd numbers from both arrays numbers and userIds into a newly created array named `oddCollection`
+function findOdd(arr) {
+  for (let num of arr) {
+    if (num % 2) {
+      oddCollection.push(num);
+    }
+  }
+  return oddCollection;
+}
+findOdd(numbers);
+findOdd(userIds);
+console.log(oddCollection);
 
 /*
   @param means parameter
 
- 4. Write a function named times which accets two parameter and return an array. 
+ 4. Write a function named times which accepts two parameter and return an array. 
 
   @param times (number)
   @param character (string)
@@ -24,8 +59,12 @@ let userIds = [1230, 234, 1278, 984, 763, 900];
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times() {
-  // Your code
+function times(noOfTimes, val) {
+  let result = [];
+  for (let i = 0; i < noOfTimes; i++) {
+    result.push(val);
+  }
+  return result;
 }
 
 // Uncomment the code below and test the output
@@ -33,7 +72,7 @@ function times() {
 // console.log(times(5, 'c')); // ['c', 'c', 'c', 'c', 'c']
 // console.log(times(2, 'a')); // ['a', 'a']
 // console.log(times(0)); // []
-// console.log(times(5)); // ['test', 'test', 'test', 'test', 'test']
+// console.log(times(5, 'test')); // ['test', 'test', 'test', 'test', 'test']
 
 /*
 
@@ -48,8 +87,8 @@ function times() {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert(arr) {
+  return arr.reverse();
 }
 
 // Uncomment the code below and test the output
@@ -70,8 +109,14 @@ function revert() {
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function clear() {
-  // your code
+function clear(arr) {
+  for (let arrCheck of arr) {
+    if (Boolean(arrCheck) === false) {
+      let index = arr.indexOf(arrCheck); // know index of an element in an array;
+      delete arr[index]; // delete that element;
+    }
+  }
+  return arr;
 }
 
 // Uncomment the code below and test the output
@@ -93,8 +138,12 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+function arrayToObj(arr) {
+  let obj = {};
+  for (let i = 0; i < arr.length; i++) {
+    obj[i] = arr[i];
+  }
+  return obj;
 }
 
 // Uncomment the code below and test the output
