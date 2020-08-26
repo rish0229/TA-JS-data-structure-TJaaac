@@ -44,7 +44,7 @@ for (let i = 0; i < got.houses[1].people.length; i++) {
   console.log(got.houses[1].people[i].name);
 }
 
-// 7. Log the name and description of all the people in house Lannisters (index 1) one by one like `I am [name] and my bio is [description]`
+// 7. Log the name and description of all the people in house Lannsters (index 1) one by one like `I am [name] and my bio is [description]`
 for (let i = 0; i < got.houses[1].people.length; i++) {
   console.log(
     `I am ${got.houses[1].people[i].name} and my bio is ${got.houses[1].people[i].description}`
